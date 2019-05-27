@@ -1,11 +1,30 @@
 {
   "name": "vue-dropbox-picker",
+  "main": "dist/VueDropboxPicker.umd.min.js",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xoxmaman/vue-dropbox-picker.git"
+  },
+  "keywords": [
+    "vue",
+    "dropbox",
+    "files",
+    "picker",
+    "chooser"
+  ],
+  "author": "Kobyzskoi Dmytryi <xoxmaman@gmail.com> (https://github.com/xoxmaman)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xoxmaman/vue-dropbox-picker/issues"
+  },
+  "homepage": "https://github.com/xoxmaman/vue-dropbox-picker",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-bundle": "vue-cli-service build --target lib --name VueDropboxPicker ./src/DropboxPicker.vue"
   },
   "dependencies": {
     "vue": "^2.6.10",
@@ -17,5 +36,11 @@
     "@vue/cli-service": "^3.8.0",
     "typescript": "^3.4.3",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "*.json",
+    "*.js"
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "name": "vue-dropbox-picker",
   "main": "dist/VueDropboxPicker.umd.min.js",
-  "version": "0.1.0",
+  "types": "src/vue-dropbox-picker.d.ts",
+  "version": "0.1.1",
   "private": false,
   "repository": {
     "type": "git",
@@ -27,15 +28,15 @@
     "build-bundle": "vue-cli-service build --target lib --name VueDropboxPicker ./src/DropboxPicker.vue"
   },
   "dependencies": {
-    "vue": "^2.6.10",
-    "vue-class-component": "^7.0.2",
-    "vue-property-decorator": "^8.1.0"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-typescript": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
     "typescript": "^3.4.3",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.1.0"
   },
   "files": [
     "dist/*",

@@ -7,7 +7,11 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator'
-import ChooserOptions = Dropbox.ChooserOptions
+import { Chooser, ChooserFile, ChooserOptions } from './dropbox'
+
+declare global {
+    interface Window { Dropbox: Chooser }
+}
 
 @Component({})
 export default class DropboxPicker extends Vue {
@@ -74,7 +78,7 @@ export default class DropboxPicker extends Vue {
       multiselect: this.multiselect,
       folderselect: this.folderselect,
       linkType: this.linkType,
-      success: (files: ReadonlyArray<Dropbox.ChooserFile>) => {
+      success: (files: ReadonlyArray<ChooserFile>) => {
         this.$emit('picked', files)
       },
       cancel: () => {
